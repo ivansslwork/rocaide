@@ -1,0 +1,869 @@
+2026-10-19T05:54:03.3147901Z Current runner version: '2.337.0'
+2026-10-19T05:54:03.3186041Z ##[group]Runner Image Provisioner
+2026-10-19T05:54:03.3187425Z Hosted Compute Agent
+2026-10-19T05:54:03.3188709Z Version: 20261012.601
+2026-10-19T05:54:03.3189879Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+2026-10-19T05:54:03.3191188Z Build Date: 2026-10-12T17:48:21Z
+2026-10-19T05:54:03.3192573Z Worker ID: {f475d2b0-11e5-463d-936a-69d4cac53866}
+2026-10-19T05:54:03.3193811Z Region: centralus
+2026-10-19T05:54:03.3194918Z Cloud: Azure
+2026-10-19T05:54:03.3196385Z ##[endgroup]
+2026-10-19T05:54:03.3198711Z ##[group]Operating System
+2026-10-19T05:54:03.3199874Z Ubuntu
+2026-10-19T05:54:03.3200732Z 24.04.5
+2026-10-19T05:54:03.3201720Z LTS
+2026-10-19T05:54:03.3202711Z ##[endgroup]
+2026-10-19T05:54:03.3203758Z ##[group]Runner Image
+2026-10-19T05:54:03.3205018Z Image: ubuntu-24.04
+2026-10-19T05:54:03.3206576Z Version: 20261012.334.1
+2026-10-19T05:54:03.3209001Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-19T05:54:03.3211931Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+2026-10-19T05:54:03.3214761Z ##[endgroup]
+2026-10-19T05:54:03.3217182Z ##[group]GITHUB_TOKEN Permissions
+2026-10-19T05:54:03.3219981Z Contents: write
+2026-10-19T05:54:03.3221044Z Metadata: read
+2026-10-19T05:54:03.3222199Z ##[endgroup]
+2026-10-19T05:54:03.3244493Z Secret source: Actions
+2026-10-19T05:54:03.3246490Z Cache mode: write
+2026-10-19T05:54:03.3247766Z Prepare workflow directory
+2026-10-19T05:54:03.4231297Z Prepare all required actions
+2026-10-19T05:54:03.4387812Z Getting action download info
+2026-10-19T05:54:03.7613656Z Download action repository 'actions/checkout@v7' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-19T05:54:03.8817935Z Download action repository 'actions/setup-java@v5' (SHA:b6effb05e454b25005698d916606bdc6ffcbf961)
+2026-10-19T05:54:04.5291342Z Download action repository 'actions/setup-node@v6' (SHA:249970729cb0ef3589644e2896645e5dc5ba9c38)
+2026-10-19T05:54:04.6992221Z Download action repository 'actions/upload-artifact@v7' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+2026-10-19T05:54:05.2778750Z Download action repository 'softprops/action-gh-release@v3' (SHA:efb35369e0ad2afab669f228072c1b0d510eae64)
+2026-10-19T05:54:05.7475731Z Complete job name: build
+2026-10-19T05:54:05.8461907Z ##[group]Run actions/checkout@v7
+2026-10-19T05:54:05.8463314Z with:
+2026-10-19T05:54:05.8464172Z   repository: ownerroc/rocaide
+2026-10-19T05:54:05.8473466Z   token: ***
+2026-10-19T05:54:05.8474367Z   ssh-strict: true
+2026-10-19T05:54:05.8475220Z   ssh-user: git
+2026-10-19T05:54:05.8476255Z   persist-credentials: true
+2026-10-19T05:54:05.8477229Z   clean: true
+2026-10-19T05:54:05.8478103Z   sparse-checkout-cone-mode: true
+2026-10-19T05:54:05.8479154Z   fetch-depth: 1
+2026-10-19T05:54:05.8479998Z   fetch-tags: false
+2026-10-19T05:54:05.8480873Z   show-progress: true
+2026-10-19T05:54:05.8481742Z   lfs: false
+2026-10-19T05:54:05.8482553Z   submodules: false
+2026-10-19T05:54:05.8483471Z   set-safe-directory: true
+2026-10-19T05:54:05.8484468Z   allow-unsafe-pr-checkout: false
+2026-10-19T05:54:05.8486213Z ##[endgroup]
+2026-10-19T05:54:05.9718479Z Syncing repository: ownerroc/rocaide
+2026-10-19T05:54:05.9722487Z ##[group]Getting Git version info
+2026-10-19T05:54:05.9724748Z Working directory is '/home/runner/work/rocaide/rocaide'
+2026-10-19T05:54:05.9728470Z [command]/usr/bin/git version
+2026-10-19T05:54:05.9830504Z git version 2.55.0
+2026-10-19T05:54:05.9896636Z ##[endgroup]
+2026-10-19T05:54:05.9907983Z Temporarily overriding HOME='/home/runner/work/_temp/5e0b5d31-0342-4a7e-b01f-40be292fd01f' before making global git config changes
+2026-10-19T05:54:05.9912681Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-19T05:54:05.9927238Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rocaide/rocaide
+2026-10-19T05:54:06.0049300Z Deleting the contents of '/home/runner/work/rocaide/rocaide'
+2026-10-19T05:54:06.0058434Z ##[group]Determining repository object format
+2026-10-19T05:54:06.0061737Z ##[endgroup]
+2026-10-19T05:54:06.0064353Z ##[group]Initializing the repository
+2026-10-19T05:54:06.0067219Z [command]/usr/bin/git init /home/runner/work/rocaide/rocaide
+2026-10-19T05:54:06.0200037Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-19T05:54:06.0217897Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-19T05:54:06.0228821Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-19T05:54:06.0231857Z hint: call:
+2026-10-19T05:54:06.0233878Z hint:
+2026-10-19T05:54:06.0237104Z hint: 	git config --global init.defaultBranch <name>
+2026-10-19T05:54:06.0239622Z hint:
+2026-10-19T05:54:06.0242352Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-19T05:54:06.0248013Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-19T05:54:06.0250886Z hint:
+2026-10-19T05:54:06.0252476Z hint: 	git branch -m <name>
+2026-10-19T05:54:06.0254366Z hint:
+2026-10-19T05:54:06.0257020Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-19T05:54:06.0261264Z Initialized empty Git repository in /home/runner/work/rocaide/rocaide/.git/
+2026-10-19T05:54:06.0267833Z [command]/usr/bin/git remote add origin https://github.com/ownerroc/rocaide
+2026-10-19T05:54:06.0319896Z ##[endgroup]
+2026-10-19T05:54:06.0322980Z ##[group]Disabling automatic garbage collection
+2026-10-19T05:54:06.0327032Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-19T05:54:06.0418886Z ##[endgroup]
+2026-10-19T05:54:06.0437683Z ##[group]Setting up auth
+2026-10-19T05:54:06.0466943Z Removing SSH command configuration
+2026-10-19T05:54:06.0470052Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T05:54:06.0482507Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-19T05:54:06.1001411Z Removing HTTP extra header
+2026-10-19T05:54:06.1004810Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T05:54:06.1072580Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-19T05:54:06.1391844Z Removing includeIf entries pointing to credentials config files
+2026-10-19T05:54:06.1394865Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-19T05:54:06.1432884Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-19T05:54:06.1686976Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-29b89cb3-8195-4eb4-b2a2-f834e70cb535.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-19T05:54:06.1734379Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/rocaide/rocaide/.git.path /home/runner/work/_temp/git-credentials-29b89cb3-8195-4eb4-b2a2-f834e70cb535.config
+2026-10-19T05:54:06.1776869Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/rocaide/rocaide/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-29b89cb3-8195-4eb4-b2a2-f834e70cb535.config
+2026-10-19T05:54:06.1823683Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-29b89cb3-8195-4eb4-b2a2-f834e70cb535.config
+2026-10-19T05:54:06.1874492Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-29b89cb3-8195-4eb4-b2a2-f834e70cb535.config
+2026-10-19T05:54:06.1901837Z ##[endgroup]
+2026-10-19T05:54:06.1905082Z ##[group]Fetching the repository
+2026-10-19T05:54:06.1911580Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +52edf7a78f815259eaf9ac3c4e40a51d24f66823:refs/remotes/origin/main
+2026-10-19T05:54:07.3628872Z From https://github.com/ownerroc/rocaide
+2026-10-19T05:54:07.3646239Z  * [new ref]         52edf7a78f815259eaf9ac3c4e40a51d24f66823 -> origin/main
+2026-10-19T05:54:07.3696225Z [command]/usr/bin/git branch --list --remote origin/main
+2026-10-19T05:54:07.3696945Z   origin/main
+2026-10-19T05:54:07.3701435Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-10-19T05:54:07.3745999Z 52edf7a78f815259eaf9ac3c4e40a51d24f66823
+2026-10-19T05:54:07.3806336Z ##[endgroup]
+2026-10-19T05:54:07.3807429Z ##[group]Determining the checkout info
+2026-10-19T05:54:07.3824769Z ##[endgroup]
+2026-10-19T05:54:07.3834491Z [command]/usr/bin/git sparse-checkout disable
+2026-10-19T05:54:07.3857229Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-19T05:54:07.3927655Z ##[group]Checking out the ref
+2026-10-19T05:54:07.3928761Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-19T05:54:07.6173758Z Switched to a new branch 'main'
+2026-10-19T05:54:07.6194205Z branch 'main' set up to track 'origin/main'.
+2026-10-19T05:54:07.6229333Z ##[endgroup]
+2026-10-19T05:54:07.6310100Z [command]/usr/bin/git log -1 --format=%H
+2026-10-19T05:54:07.6353120Z 52edf7a78f815259eaf9ac3c4e40a51d24f66823
+2026-10-19T05:54:07.6725450Z ##[group]Run actions/setup-java@v5
+2026-10-19T05:54:07.6725798Z with:
+2026-10-19T05:54:07.6726012Z   distribution: temurin
+2026-10-19T05:54:07.6726246Z   java-version: 17
+2026-10-19T05:54:07.6726464Z   java-package: jdk
+2026-10-19T05:54:07.6726698Z   check-latest: false
+2026-10-19T05:54:07.6726938Z   set-default: true
+2026-10-19T05:54:07.6727176Z   verify-signature: false
+2026-10-19T05:54:07.6727427Z   server-id: github
+2026-10-19T05:54:07.6727667Z   server-username: GITHUB_ACTOR
+2026-10-19T05:54:07.6727966Z   server-password: GITHUB_TOKEN
+2026-10-19T05:54:07.6728251Z   overwrite-settings: true
+2026-10-19T05:54:07.6728496Z   job-status: success
+2026-10-19T05:54:07.6731070Z   token: ***
+2026-10-19T05:54:07.6731309Z   show-download-progress: false
+2026-10-19T05:54:07.6731572Z ##[endgroup]
+2026-10-19T05:54:07.8397112Z ##[group]Installed distributions
+2026-10-19T05:54:07.8526405Z Resolved Java 17.0.20+1 from tool-cache
+2026-10-19T05:54:07.8538345Z Setting Java 17.0.20+1 as the default
+2026-10-19T05:54:07.8546438Z Creating toolchains.xml for JDK version 17 from temurin
+2026-10-19T05:54:07.8619005Z Writing to /home/runner/.m2/toolchains.xml
+2026-10-19T05:54:07.8625926Z 
+2026-10-19T05:54:07.8628992Z Java configuration:
+2026-10-19T05:54:07.8629718Z   Distribution: temurin
+2026-10-19T05:54:07.8630427Z   Version: 17.0.20+1
+2026-10-19T05:54:07.8631235Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-19T05:54:07.8631955Z 
+2026-10-19T05:54:07.8632710Z ##[endgroup]
+2026-10-19T05:54:07.8666582Z Creating settings.xml with server-id: github
+2026-10-19T05:54:07.8686091Z Writing to /home/runner/.m2/settings.xml
+2026-10-19T05:54:07.8706838Z Configured MAVEN_ARGS to include -ntp to suppress Maven transfer progress logs. Set 'show-download-progress: true' to keep the download progress output.
+2026-10-19T05:54:07.8923211Z ##[group]Run actions/setup-node@v6
+2026-10-19T05:54:07.8923657Z with:
+2026-10-19T05:54:07.8924042Z   node-version: lts/*
+2026-10-19T05:54:07.8924463Z   cache: npm
+2026-10-19T05:54:07.8924862Z   check-latest: false
+2026-10-19T05:54:07.8929781Z   token: ***
+2026-10-19T05:54:07.8930171Z   package-manager-cache: true
+2026-10-19T05:54:07.8930592Z env:
+2026-10-19T05:54:07.8931105Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-19T05:54:07.8931984Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-19T05:54:07.8932688Z   MAVEN_ARGS: -ntp
+2026-10-19T05:54:07.8933036Z ##[endgroup]
+2026-10-19T05:54:08.0447373Z Attempt to resolve LTS alias from manifest...
+2026-10-19T05:54:09.3692761Z Found in cache @ /opt/hostedtoolcache/node/24.21.0/x64
+2026-10-19T05:54:09.3695135Z ##[group]Environment details
+2026-10-19T05:54:09.8564128Z node: v24.21.0
+2026-10-19T05:54:09.8565114Z npm: 11.19.0
+2026-10-19T05:54:09.8587296Z yarn: 1.22.22
+2026-10-19T05:54:09.8588907Z ##[endgroup]
+2026-10-19T05:54:09.8626374Z [command]/opt/hostedtoolcache/node/24.21.0/x64/bin/npm config get cache
+2026-10-19T05:54:10.1497414Z /home/runner/.npm
+2026-10-19T05:54:10.3029721Z Cache hit for: node-cache-Linux-x64-npm-5cdcc943edc6a4cb8996189b744afb747159ab2c2ffc06f9d2509f415b4a5862
+2026-10-19T05:54:11.4780102Z Received 121634816 of 172771946 (70.4%), 115.9 MBs/sec
+2026-10-19T05:54:11.8580131Z Received 172771946 of 172771946 (100.0%), 119.3 MBs/sec
+2026-10-19T05:54:11.8583402Z Cache Size: ~165 MB (172771946 B)
+2026-10-19T05:54:11.8627542Z [command]/usr/bin/tar -xf /home/runner/work/_temp/44807dc0-4734-4146-b907-07fc111a1312/cache.tzst -P -C /home/runner/work/rocaide/rocaide --use-compress-program unzstd
+2026-10-19T05:54:12.7281947Z Cache restored successfully
+2026-10-19T05:54:12.7436938Z Cache restored from key: node-cache-Linux-x64-npm-5cdcc943edc6a4cb8996189b744afb747159ab2c2ffc06f9d2509f415b4a5862
+2026-10-19T05:54:12.7747197Z ##[group]Run GRADLE_VERSION="8.11"
+2026-10-19T05:54:12.7747577Z [36;1mGRADLE_VERSION="8.11"[0m
+2026-10-19T05:54:12.7748149Z [36;1mwget -q "https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip" -O /tmp/gradle.zip[0m
+2026-10-19T05:54:12.7748782Z [36;1msudo rm -rf /usr/share/gradle /usr/local/share/gradle[0m
+2026-10-19T05:54:12.7749195Z [36;1msudo unzip -q -o /tmp/gradle.zip -d /usr/local/share[0m
+2026-10-19T05:54:12.7749705Z [36;1msudo ln -sf /usr/local/share/gradle-${GRADLE_VERSION}/bin/gradle /usr/local/bin/gradle[0m
+2026-10-19T05:54:12.7750189Z [36;1mecho "/usr/local/bin" >> $GITHUB_PATH[0m
+2026-10-19T05:54:12.7750505Z [36;1mexport PATH="/usr/local/bin:$PATH"[0m
+2026-10-19T05:54:12.7750789Z [36;1mgradle --version[0m
+2026-10-19T05:54:12.8053056Z shell: /usr/bin/bash -e {0}
+2026-10-19T05:54:12.8053381Z env:
+2026-10-19T05:54:12.8053722Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-19T05:54:12.8054351Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-19T05:54:12.8054753Z   MAVEN_ARGS: -ntp
+2026-10-19T05:54:12.8054971Z ##[endgroup]
+2026-10-19T05:54:17.5648690Z 
+2026-10-19T05:54:17.5665205Z Welcome to Gradle 8.11!
+2026-10-19T05:54:17.5696659Z 
+2026-10-19T05:54:17.5700105Z Here are the highlights of this release:
+2026-10-19T05:54:17.5721931Z  - Parallel load and store for Configuration Cache
+2026-10-19T05:54:17.5723845Z  - Java compilation errors at the end of the build output
+2026-10-19T05:54:17.5724870Z  - Consolidated report for warnings and deprecations
+2026-10-19T05:54:17.5725857Z 
+2026-10-19T05:54:17.5726617Z For more details see https://docs.gradle.org/8.11/release-notes.html
+2026-10-19T05:54:17.5728872Z 
+2026-10-19T05:54:17.5731401Z 
+2026-10-19T05:54:17.5732063Z ------------------------------------------------------------
+2026-10-19T05:54:17.5733201Z Gradle 8.11
+2026-10-19T05:54:17.5734157Z ------------------------------------------------------------
+2026-10-19T05:54:17.5734872Z 
+2026-10-19T05:54:17.5735742Z Build time:    2024-11-11 13:58:01 UTC
+2026-10-19T05:54:17.5736797Z Revision:      b2ef976169a05b3c76d04f0fa76a940859f96fa4
+2026-10-19T05:54:17.5737672Z 
+2026-10-19T05:54:17.5738074Z Kotlin:        2.0.20
+2026-10-19T05:54:17.5738924Z Groovy:        3.0.22
+2026-10-19T05:54:17.5739961Z Ant:           Apache Ant(TM) version 1.10.14 compiled on August 16 2023
+2026-10-19T05:54:17.5741181Z Launcher JVM:  17.0.20.1 (Eclipse Adoptium 17.0.20.1+1)
+2026-10-19T05:54:17.5744285Z Daemon JVM:    Compatible with Java 21, any vendor (from gradle/gradle-daemon-jvm.properties)
+2026-10-19T05:54:17.5745468Z OS:            Linux 6.17.0-1022-azure amd64
+2026-10-19T05:54:17.5745826Z 
+2026-10-19T05:54:17.5926784Z ##[group]Run npm install -g cordova
+2026-10-19T05:54:17.5927283Z [36;1mnpm install -g cordova[0m
+2026-10-19T05:54:17.5991651Z shell: /usr/bin/bash -e {0}
+2026-10-19T05:54:17.5991927Z env:
+2026-10-19T05:54:17.5992266Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-19T05:54:17.5992820Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-19T05:54:17.5993251Z   MAVEN_ARGS: -ntp
+2026-10-19T05:54:17.5993470Z ##[endgroup]
+2026-10-19T05:54:27.2597386Z npm warn deprecated stringify-package@1.0.1: This module is not used anymore, and has been replaced by @npmcli/package-json
+2026-10-19T05:54:28.1957761Z 
+2026-10-19T05:54:28.1958421Z added 218 packages in 10s
+2026-10-19T05:54:28.1958778Z 
+2026-10-19T05:54:28.1966510Z 29 packages are looking for funding
+2026-10-19T05:54:28.1976228Z   run `npm fund` for details
+2026-10-19T05:54:28.2549854Z ##[group]Run npm install --no-audit --no-fund
+2026-10-19T05:54:28.2550481Z [36;1mnpm install --no-audit --no-fund[0m
+2026-10-19T05:54:28.2624776Z shell: /usr/bin/bash -e {0}
+2026-10-19T05:54:28.2625037Z env:
+2026-10-19T05:54:28.2625723Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-19T05:54:28.2626258Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-19T05:54:28.2626647Z   MAVEN_ARGS: -ntp
+2026-10-19T05:54:28.2626866Z ##[endgroup]
+2026-10-19T05:54:29.0964333Z npm warn ERESOLVE overriding peer dependency
+2026-10-19T05:54:29.0986493Z npm warn While resolving: @babel/preset-modules@0.1.6-no-external-plugins
+2026-10-19T05:54:29.1019617Z npm warn Found: @babel/core@8.0.1
+2026-10-19T05:54:29.1036742Z npm warn node_modules/@babel/core
+2026-10-19T05:54:29.1037789Z npm warn   dev @babel/core@"^8.0.1" from the root project
+2026-10-19T05:54:29.1039908Z npm warn   71 more (@babel/helper-create-class-features-plugin, ...)
+2026-10-19T05:54:29.1040945Z npm warn
+2026-10-19T05:54:29.1041668Z npm warn Could not resolve dependency:
+2026-10-19T05:54:29.1042908Z npm warn peer @babel/core@"^7.0.0-0 || ^8.0.0-0 <8.0.0" from @babel/preset-modules@0.1.6-no-external-plugins
+2026-10-19T05:54:29.1044202Z npm warn node_modules/@babel/preset-modules
+2026-10-19T05:54:29.1045719Z npm warn   @babel/preset-modules@"0.1.6-no-external-plugins" from @babel/preset-env@8.0.1
+2026-10-19T05:54:29.1047039Z npm warn   node_modules/@babel/preset-env
+2026-10-19T05:54:29.1047760Z npm warn
+2026-10-19T05:54:29.1048556Z npm warn Conflicting peer dependency: @babel/core@8.0.0-rc.6
+2026-10-19T05:54:29.1049486Z npm warn node_modules/@babel/core
+2026-10-19T05:54:29.1050737Z npm warn   peer @babel/core@"^7.0.0-0 || ^8.0.0-0 <8.0.0" from @babel/preset-modules@0.1.6-no-external-plugins
+2026-10-19T05:54:29.1051952Z npm warn   node_modules/@babel/preset-modules
+2026-10-19T05:54:29.1053215Z npm warn     @babel/preset-modules@"0.1.6-no-external-plugins" from @babel/preset-env@8.0.1
+2026-10-19T05:54:29.1054463Z npm warn     node_modules/@babel/preset-env
+2026-10-19T05:54:34.3387433Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2026-10-19T05:54:34.4167401Z npm warn deprecated stringify-package@1.0.1: This module is not used anymore, and has been replaced by @npmcli/package-json
+2026-10-19T05:54:34.5195021Z npm warn deprecated sprintf@0.1.5: The sprintf package is deprecated in favor of sprintf-js.
+2026-10-19T05:54:34.7358787Z npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-10-19T05:54:40.6426580Z 
+2026-10-19T05:54:40.6427499Z added 917 packages in 12s
+2026-10-19T05:54:40.7162146Z ##[group]Run rm -rf platforms/android plugins
+2026-10-19T05:54:40.7162836Z [36;1mrm -rf platforms/android plugins[0m
+2026-10-19T05:54:40.7163486Z [36;1mcordova platform add android --no-telemetry[0m
+2026-10-19T05:54:40.7164105Z [36;1mnode utils/setup.js || true[0m
+2026-10-19T05:54:40.7259527Z shell: /usr/bin/bash -e {0}
+2026-10-19T05:54:40.7259960Z env:
+2026-10-19T05:54:40.7260514Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-19T05:54:40.7261430Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-19T05:54:40.7262137Z   MAVEN_ARGS: -ntp
+2026-10-19T05:54:40.7262502Z ##[endgroup]
+2026-10-19T05:54:41.1709558Z Using cordova-fetch for cordova-android@^15.0.0
+2026-10-19T05:54:41.1907329Z Adding android project...
+2026-10-19T05:54:41.2890670Z Creating Cordova project for the Android platform:
+2026-10-19T05:54:41.2926440Z 	Path: platforms/android
+2026-10-19T05:54:41.2956398Z 	Package: com.foxdebug.acode
+2026-10-19T05:54:41.2976606Z 	Name: RocAide
+2026-10-19T05:54:41.3006316Z 	Activity: MainActivity
+2026-10-19T05:54:41.3096419Z 	Android Target SDK: android-36
+2026-10-19T05:54:41.3115949Z 	Android Compile SDK: 36
+2026-10-19T05:54:41.3257009Z Subproject Path: CordovaLib
+2026-10-19T05:54:41.3276376Z Subproject Path: app
+2026-10-19T05:54:41.3296203Z Android project created with cordova-android@15.0.0
+2026-10-19T05:54:41.4043391Z Discovered plugin "cordova-clipboard". Adding it to the project
+2026-10-19T05:54:41.4647741Z Installing "cordova-clipboard" for android
+2026-10-19T05:54:41.5066410Z Adding cordova-clipboard to package.json
+2026-10-19T05:54:41.5286842Z Discovered plugin "cordova-plugin-device". Adding it to the project
+2026-10-19T05:54:41.5456652Z Installing "cordova-plugin-device" for android
+2026-10-19T05:54:41.5616656Z Adding cordova-plugin-device to package.json
+2026-10-19T05:54:41.5707060Z Discovered plugin "cordova-plugin-file". Adding it to the project
+2026-10-19T05:54:41.9893579Z /home/runner/work/rocaide/rocaide/platforms/android/CordovaLib/src/org/apache/cordova/engine/SystemWebView.java updated
+2026-10-19T05:54:41.9907105Z /home/runner/work/rocaide/rocaide/platforms/android/CordovaLib/src/org/apache/cordova/engine/SystemWebViewEngine.java updated
+2026-10-19T05:54:41.9916713Z /home/runner/work/rocaide/rocaide/platforms/android/CordovaLib/src/org/apache/cordova/CordovaWebViewEngine.java updated
+2026-10-19T05:54:41.9936631Z /home/runner/work/rocaide/rocaide/platforms/android/CordovaLib/src/org/apache/cordova/CordovaWebView.java updated
+2026-10-19T05:54:41.9943989Z /home/runner/work/rocaide/rocaide/platforms/android/CordovaLib/src/org/apache/cordova/CordovaWebViewImpl.java updated
+2026-10-19T05:54:41.9945994Z /home/runner/work/rocaide/rocaide/platforms/android/.flag_done updated
+2026-10-19T05:54:42.0099471Z Installing "cordova-plugin-file" for android
+2026-10-19T05:54:42.1719274Z Subproject Path: CordovaLib
+2026-10-19T05:54:42.1719877Z Subproject Path: app
+2026-10-19T05:54:42.1725146Z 
+2026-10-19T05:54:42.1727217Z The Android Persistent storage location now defaults to "Internal". Please check this plugin's README to see if your application needs any changes in its config.xml.
+2026-10-19T05:54:42.1728673Z 
+2026-10-19T05:54:42.1729265Z If this is a new application no changes are required.
+2026-10-19T05:54:42.1729928Z 
+2026-10-19T05:54:42.1731075Z If this is an update to an existing application that did not specify an "AndroidPersistentFileLocation" you may need to add:
+2026-10-19T05:54:42.1732128Z 
+2026-10-19T05:54:42.1733055Z       "<preference name="AndroidPersistentFileLocation" value="Compatibility" />"
+2026-10-19T05:54:42.1733933Z 
+2026-10-19T05:54:42.1756323Z to config.xml in order for the application to find previously stored files.
+2026-10-19T05:54:42.1757365Z         
+2026-10-19T05:54:42.1760426Z Adding cordova-plugin-file to package.json
+2026-10-19T05:54:42.1806410Z Discovered plugin "cordova-plugin-server". Adding it to the project
+2026-10-19T05:54:46.4997827Z Installing "cordova-plugin-server" for android
+2026-10-19T05:54:46.5055636Z Subproject Path: CordovaLib
+2026-10-19T05:54:46.5056496Z Subproject Path: app
+2026-10-19T05:54:46.5069001Z Adding cordova-plugin-server to package.json
+2026-10-19T05:54:46.5126323Z Discovered plugin "cordova-plugin-ftp". Adding it to the project
+2026-10-19T05:54:49.3312932Z Installing "cordova-plugin-ftp" for android
+2026-10-19T05:54:49.3374406Z Subproject Path: CordovaLib
+2026-10-19T05:54:49.3377947Z Subproject Path: app
+2026-10-19T05:54:49.3387088Z Adding cordova-plugin-ftp to package.json
+2026-10-19T05:54:49.3431558Z Discovered plugin "cordova-plugin-sdcard". Adding it to the project
+2026-10-19T05:54:52.1187220Z Installing "cordova-plugin-sdcard" for android
+2026-10-19T05:54:52.1246387Z Subproject Path: CordovaLib
+2026-10-19T05:54:52.1247247Z Subproject Path: app
+2026-10-19T05:54:52.1258309Z Adding cordova-plugin-sdcard to package.json
+2026-10-19T05:54:52.1327783Z Discovered plugin "cordova-plugin-advanced-http". Adding it to the project
+2026-10-19T05:54:52.1436233Z Installing "cordova-plugin-advanced-http" for android
+2026-10-19T05:54:52.1452990Z Plugin dependency "cordova-plugin-file@8.1.3" already fetched, using that version.
+2026-10-19T05:54:52.1463329Z Dependent plugin "cordova-plugin-file" already installed on android.
+2026-10-19T05:54:52.1614108Z Adding cordova-plugin-advanced-http to package.json
+2026-10-19T05:54:52.1666502Z Discovered plugin "cordova-plugin-websocket". Adding it to the project
+2026-10-19T05:54:54.9327287Z Installing "cordova-plugin-websocket" for android
+2026-10-19T05:54:54.9389615Z Subproject Path: CordovaLib
+2026-10-19T05:54:54.9390207Z Subproject Path: app
+2026-10-19T05:54:54.9401050Z Adding cordova-plugin-websocket to package.json
+2026-10-19T05:54:54.9466482Z Discovered plugin "cordova-plugin-buildinfo". Adding it to the project
+2026-10-19T05:54:57.6997038Z Installing "cordova-plugin-buildinfo" for android
+2026-10-19T05:54:57.7073818Z Subproject Path: CordovaLib
+2026-10-19T05:54:57.7077129Z Subproject Path: app
+2026-10-19T05:54:57.7087830Z Adding cordova-plugin-buildinfo to package.json
+2026-10-19T05:54:57.7151910Z Discovered plugin "cordova-plugin-browser". Adding it to the project
+2026-10-19T05:55:00.5131280Z Installing "cordova-plugin-browser" for android
+2026-10-19T05:55:00.5240845Z Adding cordova-plugin-browser to package.json
+2026-10-19T05:55:00.5302466Z Discovered plugin "cordova-plugin-sftp". Adding it to the project
+2026-10-19T05:55:03.3040139Z Installing "cordova-plugin-sftp" for android
+2026-10-19T05:55:03.3096631Z Subproject Path: CordovaLib
+2026-10-19T05:55:03.3097415Z Subproject Path: app
+2026-10-19T05:55:03.3109243Z Adding cordova-plugin-sftp to package.json
+2026-10-19T05:55:03.3158926Z Discovered plugin "com.foxdebug.acode.rk.exec.terminal". Adding it to the project
+2026-10-19T05:55:06.1645031Z Installing "com.foxdebug.acode.rk.exec.terminal" for android
+2026-10-19T05:55:06.2038835Z Subproject Path: CordovaLib
+2026-10-19T05:55:06.2095986Z Subproject Path: app
+2026-10-19T05:55:06.2180524Z Adding com.foxdebug.acode.rk.exec.terminal to package.json
+2026-10-19T05:55:06.2537139Z Discovered plugin "com.foxdebug.acode.rk.plugin.plugincontext". Adding it to the project
+2026-10-19T05:55:09.0557008Z Installing "com.foxdebug.acode.rk.plugin.plugincontext" for android
+2026-10-19T05:55:09.0635799Z Adding com.foxdebug.acode.rk.plugin.plugincontext to package.json
+2026-10-19T05:55:09.0706666Z Discovered plugin "com.foxdebug.acode.rk.auth". Adding it to the project
+2026-10-19T05:55:11.9490267Z Installing "com.foxdebug.acode.rk.auth" for android
+2026-10-19T05:55:11.9551959Z Subproject Path: CordovaLib
+2026-10-19T05:55:11.9553012Z Subproject Path: app
+2026-10-19T05:55:11.9565964Z Adding com.foxdebug.acode.rk.auth to package.json
+2026-10-19T05:55:11.9632936Z Discovered plugin "com.foxdebug.acode.rk.exec.proot". Adding it to the project
+2026-10-19T05:55:14.7899220Z Installing "com.foxdebug.acode.rk.exec.proot" for android
+2026-10-19T05:55:14.8095133Z Adding com.foxdebug.acode.rk.exec.proot to package.json
+2026-10-19T05:55:14.8177765Z Discovered plugin "cordova-plugin-iap". Adding it to the project
+2026-10-19T05:55:17.6243065Z Installing "cordova-plugin-iap" for android
+2026-10-19T05:55:17.6354544Z Subproject Path: CordovaLib
+2026-10-19T05:55:17.6386626Z Subproject Path: app
+2026-10-19T05:55:17.6396304Z Adding cordova-plugin-iap to package.json
+2026-10-19T05:55:17.6466581Z Discovered plugin "com.foxdebug.acode.rk.customtabs". Adding it to the project
+2026-10-19T05:55:20.4186799Z Installing "com.foxdebug.acode.rk.customtabs" for android
+2026-10-19T05:55:20.4267974Z Subproject Path: CordovaLib
+2026-10-19T05:55:20.4270054Z Subproject Path: app
+2026-10-19T05:55:20.4272031Z Adding com.foxdebug.acode.rk.customtabs to package.json
+2026-10-19T05:55:20.4332789Z Discovered plugin "cordova-plugin-system". Adding it to the project
+2026-10-19T05:55:23.2171119Z Installing "cordova-plugin-system" for android
+2026-10-19T05:55:23.2281300Z Subproject Path: CordovaLib
+2026-10-19T05:55:23.2282234Z Subproject Path: app
+2026-10-19T05:55:23.2293127Z Adding cordova-plugin-system to package.json
+2026-10-19T05:55:23.2356093Z Discovered plugin "com.foxdebug.acode.rk.rocaide". Adding it to the project
+2026-10-19T05:55:26.0387001Z Installing "com.foxdebug.acode.rk.rocaide" for android
+2026-10-19T05:55:26.0666808Z Adding com.foxdebug.acode.rk.rocaide to package.json
+2026-10-19T05:55:26.1754237Z [32mcopied: ic_launcher_background.xml[0m
+2026-10-19T05:55:26.1761251Z [32mcopied: ic_launcher_foreground.xml[0m
+2026-10-19T05:55:26.1762014Z [32mcopied: ic_launcher.xml[0m
+2026-10-19T05:55:26.1764192Z [32mcopied: ic_launcher_round.xml[0m
+2026-10-19T05:55:26.1768134Z [31mdeleted conflicting resource: ic_launcher.png[0m
+2026-10-19T05:55:26.1769834Z [32mcopied: ic_launcher.webp[0m
+2026-10-19T05:55:26.1772930Z [32mcopied: ic_launcher_round.webp[0m
+2026-10-19T05:55:26.1777265Z [31mdeleted conflicting resource: ic_launcher.png[0m
+2026-10-19T05:55:26.1779055Z [32mcopied: ic_launcher.webp[0m
+2026-10-19T05:55:26.1781122Z [32mcopied: ic_launcher_round.webp[0m
+2026-10-19T05:55:26.1784288Z [31mdeleted conflicting resource: ic_launcher.png[0m
+2026-10-19T05:55:26.1786172Z [32mcopied: ic_launcher.webp[0m
+2026-10-19T05:55:26.1788491Z [32mcopied: ic_launcher_round.webp[0m
+2026-10-19T05:55:26.1791259Z [31mdeleted conflicting resource: ic_launcher.png[0m
+2026-10-19T05:55:26.1793013Z [32mcopied: ic_launcher.webp[0m
+2026-10-19T05:55:26.1795680Z [32mcopied: ic_launcher_round.webp[0m
+2026-10-19T05:55:26.1798630Z [31mdeleted conflicting resource: ic_launcher.png[0m
+2026-10-19T05:55:26.1800181Z [32mcopied: ic_launcher.webp[0m
+2026-10-19T05:55:26.1802498Z [32mcopied: ic_launcher_round.webp[0m
+2026-10-19T05:55:26.1805067Z [32mcopied: colors.xml[0m
+2026-10-19T05:55:26.1807328Z [32mcopied: ic_launcher_background.xml[0m
+2026-10-19T05:55:26.1809035Z [32mcopied: themes.xml[0m
+2026-10-19T05:55:26.1811363Z [32mcopied: network_security_config.xml[0m
+2026-10-19T05:55:26.2960157Z [Cordova Hook] ✅ Enabled legacy JNI packaging
+2026-10-19T05:55:26.3986369Z [Cordova Hook] ✅ Enabled static context
+2026-10-19T05:55:26.5047171Z ---------------------------------------------------------------------------------
+2026-10-19T05:55:26.5047802Z 
+2026-10-19T05:55:26.5047815Z 
+2026-10-19T05:55:26.5047835Z 
+2026-10-19T05:55:26.5047846Z 
+2026-10-19T05:55:26.5048381Z ⚠️ fdroid.bool not found
+2026-10-19T05:55:26.5049323Z ⚠️ Fdroid flavour will be built
+2026-10-19T05:55:26.5049843Z 
+2026-10-19T05:55:26.5049855Z 
+2026-10-19T05:55:26.5049867Z 
+2026-10-19T05:55:26.5049877Z 
+2026-10-19T05:55:26.5050403Z ---------------------------------------------------------------------------------
+2026-10-19T05:55:26.5051507Z [Cordova Hook] ✅ Patched targetSdkVersion to 28
+2026-10-19T05:55:26.6119361Z [Cordova Hook] ✅ Enabled keyboard workaround
+2026-10-19T05:55:26.6131086Z 
+2026-10-19T05:55:26.6131936Z ===============================================
+2026-10-19T05:55:26.6133298Z ==== Changed package to com.foxdebug.acode ====
+2026-10-19T05:55:26.6134418Z ===============================================
+2026-10-19T05:55:26.6135013Z 
+2026-10-19T05:55:26.6143752Z 
+2026-10-19T05:55:26.6144421Z =========================================================
+2026-10-19T05:55:26.6146011Z ==== Changed provider to com.foxdebug.acode.provider ====
+2026-10-19T05:55:26.6147155Z =========================================================
+2026-10-19T05:55:26.6148064Z 
+2026-10-19T05:55:27.6326751Z npm warn ERESOLVE overriding peer dependency
+2026-10-19T05:55:27.6334617Z npm warn While resolving: @babel/preset-modules@0.1.6-no-external-plugins
+2026-10-19T05:55:27.6336128Z npm warn Found: @babel/core@8.0.1
+2026-10-19T05:55:27.6337355Z npm warn node_modules/@babel/core
+2026-10-19T05:55:27.6338462Z npm warn   dev @babel/core@"^8.0.1" from the root project
+2026-10-19T05:55:27.6339717Z npm warn   71 more (@babel/helper-create-class-features-plugin, ...)
+2026-10-19T05:55:27.6340681Z npm warn
+2026-10-19T05:55:27.6341413Z npm warn Could not resolve dependency:
+2026-10-19T05:55:27.6342838Z npm warn peer @babel/core@"^7.0.0-0 || ^8.0.0-0 <8.0.0" from @babel/preset-modules@0.1.6-no-external-plugins
+2026-10-19T05:55:27.6344155Z npm warn node_modules/@babel/preset-modules
+2026-10-19T05:55:27.6346011Z npm warn   @babel/preset-modules@"0.1.6-no-external-plugins" from @babel/preset-env@8.0.1
+2026-10-19T05:55:27.6347408Z npm warn   node_modules/@babel/preset-env
+2026-10-19T05:55:27.6348247Z npm warn
+2026-10-19T05:55:27.6349159Z npm warn Conflicting peer dependency: @babel/core@8.0.0-rc.6
+2026-10-19T05:55:27.6350236Z npm warn node_modules/@babel/core
+2026-10-19T05:55:27.6351628Z npm warn   peer @babel/core@"^7.0.0-0 || ^8.0.0-0 <8.0.0" from @babel/preset-modules@0.1.6-no-external-plugins
+2026-10-19T05:55:27.6352961Z npm warn   node_modules/@babel/preset-modules
+2026-10-19T05:55:27.6354214Z npm warn     @babel/preset-modules@"0.1.6-no-external-plugins" from @babel/preset-env@8.0.1
+2026-10-19T05:55:27.6355653Z npm warn     node_modules/@babel/preset-env
+2026-10-19T05:55:29.1013326Z 
+2026-10-19T05:55:29.1014348Z up to date, audited 933 packages in 2s
+2026-10-19T05:55:29.1015638Z 
+2026-10-19T05:55:29.1016300Z 91 packages are looking for funding
+2026-10-19T05:55:29.1017063Z   run `npm fund` for details
+2026-10-19T05:55:29.3612913Z 
+2026-10-19T05:55:29.3614036Z 39 vulnerabilities (1 low, 7 moderate, 30 high, 1 critical)
+2026-10-19T05:55:29.3615093Z 
+2026-10-19T05:55:29.3616144Z To address issues that do not require attention, run:
+2026-10-19T05:55:29.3617074Z   npm audit fix
+2026-10-19T05:55:29.3617594Z 
+2026-10-19T05:55:29.3618243Z To address all issues (including breaking changes), run:
+2026-10-19T05:55:29.3619148Z   npm audit fix --force
+2026-10-19T05:55:29.3619711Z 
+2026-10-19T05:55:29.3620180Z Run `npm audit` for details.
+2026-10-19T05:55:29.7553351Z Using cordova-fetch for cordova-android@^15.0.0
+2026-10-19T05:55:29.7774249Z Platform android already added.
+2026-10-19T05:55:33.0377069Z Plugin "cordova-plugin-buildinfo" already installed on android.
+2026-10-19T05:55:33.0436634Z Adding cordova-plugin-buildinfo to package.json
+2026-10-19T05:55:33.5786969Z Plugin "cordova-plugin-device" already installed on android.
+2026-10-19T05:55:33.5816459Z Adding cordova-plugin-device to package.json
+2026-10-19T05:55:34.0569037Z Plugin "cordova-plugin-file" already installed on android.
+2026-10-19T05:55:34.0596373Z Adding cordova-plugin-file to package.json
+2026-10-19T05:55:37.3797490Z Plugin "com.foxdebug.acode.rk.auth" already installed on android.
+2026-10-19T05:55:37.3799071Z Adding com.foxdebug.acode.rk.auth to package.json
+2026-10-19T05:55:40.6566944Z Plugin "cordova-plugin-browser" already installed on android.
+2026-10-19T05:55:40.6595880Z Adding cordova-plugin-browser to package.json
+2026-10-19T05:55:43.9521495Z Plugin "cordova-plugin-buildinfo" already installed on android.
+2026-10-19T05:55:43.9527714Z Adding cordova-plugin-buildinfo to package.json
+2026-10-19T05:55:47.2576879Z Plugin "com.foxdebug.acode.rk.customtabs" already installed on android.
+2026-10-19T05:55:47.2577826Z Adding com.foxdebug.acode.rk.customtabs to package.json
+2026-10-19T05:55:50.5715884Z Plugin "cordova-plugin-ftp" already installed on android.
+2026-10-19T05:55:50.5720664Z Adding cordova-plugin-ftp to package.json
+2026-10-19T05:55:53.8579400Z Plugin "cordova-plugin-iap" already installed on android.
+2026-10-19T05:55:53.8585108Z Adding cordova-plugin-iap to package.json
+2026-10-19T05:55:57.1389132Z Plugin "com.foxdebug.acode.rk.plugin.plugincontext" already installed on android.
+2026-10-19T05:55:57.1394298Z Adding com.foxdebug.acode.rk.plugin.plugincontext to package.json
+2026-10-19T05:56:00.4416959Z Plugin "com.foxdebug.acode.rk.exec.proot" already installed on android.
+2026-10-19T05:56:00.4457091Z Adding com.foxdebug.acode.rk.exec.proot to package.json
+2026-10-19T05:56:03.7168373Z Plugin "com.foxdebug.acode.rk.rocaide" already installed on android.
+2026-10-19T05:56:03.7173766Z Adding com.foxdebug.acode.rk.rocaide to package.json
+2026-10-19T05:56:07.0497245Z Plugin "cordova-plugin-sdcard" already installed on android.
+2026-10-19T05:56:07.0502502Z Adding cordova-plugin-sdcard to package.json
+2026-10-19T05:56:10.3507013Z Plugin "cordova-plugin-server" already installed on android.
+2026-10-19T05:56:10.3511905Z Adding cordova-plugin-server to package.json
+2026-10-19T05:56:13.7341530Z Plugin "cordova-plugin-sftp" already installed on android.
+2026-10-19T05:56:13.7347709Z Adding cordova-plugin-sftp to package.json
+2026-10-19T05:56:17.0846925Z Plugin "cordova-plugin-system" already installed on android.
+2026-10-19T05:56:17.0866345Z Adding cordova-plugin-system to package.json
+2026-10-19T05:56:20.3947219Z Plugin "com.foxdebug.acode.rk.exec.terminal" already installed on android.
+2026-10-19T05:56:20.3976951Z Adding com.foxdebug.acode.rk.exec.terminal to package.json
+2026-10-19T05:56:23.6524179Z Plugin "cordova-plugin-websocket" already installed on android.
+2026-10-19T05:56:23.6529519Z Adding cordova-plugin-websocket to package.json
+2026-10-19T05:56:23.7240254Z ##[group]Run WRAPPER_FILE="platforms/android/gradle/wrapper/gradle-wrapper.properties"
+2026-10-19T05:56:23.7240937Z [36;1mWRAPPER_FILE="platforms/android/gradle/wrapper/gradle-wrapper.properties"[0m
+2026-10-19T05:56:23.7241395Z [36;1mif [ -f "$WRAPPER_FILE" ]; then[0m
+2026-10-19T05:56:23.7241772Z [36;1m  sed -i 's|gradle-[0-9.]*-all|gradle-8.11-all|g' "$WRAPPER_FILE"[0m
+2026-10-19T05:56:23.7242216Z [36;1m  sed -i 's|gradle-[0-9.]*-bin|gradle-8.11-all|g' "$WRAPPER_FILE"[0m
+2026-10-19T05:56:23.7242617Z [36;1m  echo "Wrapper properties after fix:"[0m
+2026-10-19T05:56:23.7242921Z [36;1m  cat "$WRAPPER_FILE"[0m
+2026-10-19T05:56:23.7243157Z [36;1mfi[0m
+2026-10-19T05:56:23.7243439Z [36;1mchmod +x platforms/android/gradlew 2>/dev/null || true[0m
+2026-10-19T05:56:23.7308753Z shell: /usr/bin/bash -e {0}
+2026-10-19T05:56:23.7309022Z env:
+2026-10-19T05:56:23.7309346Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-19T05:56:23.7309893Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-19T05:56:23.7310283Z   MAVEN_ARGS: -ntp
+2026-10-19T05:56:23.7310500Z ##[endgroup]
+2026-10-19T05:56:23.7442136Z ##[group]Run keytool -genkeypair -v \
+2026-10-19T05:56:23.7442516Z [36;1mkeytool -genkeypair -v \[0m
+2026-10-19T05:56:23.7442839Z [36;1m  -keystore rocaide-release.keystore \[0m
+2026-10-19T05:56:23.7443174Z [36;1m  -storepass rocaide2024 \[0m
+2026-10-19T05:56:23.7443448Z [36;1m  -alias rocaide \[0m
+2026-10-19T05:56:23.7443720Z [36;1m  -keypass rocaide2024 \[0m
+2026-10-19T05:56:23.7444033Z [36;1m  -keyalg RSA -keysize 2048 -validity 10000 \[0m
+2026-10-19T05:56:23.7444441Z [36;1m  -dname "CN=RocAide,OU=Dev,O=RocAide,L=Jakarta,ST=ID,C=ID"[0m
+2026-10-19T05:56:23.7445501Z [36;1mecho '{ "android": { "release": { "keystore": "rocaide-release.keystore", "storePassword": "rocaide2024", "alias": "rocaide", "password": "rocaide2024" } } }' > build.json[0m
+2026-10-19T05:56:23.7505968Z shell: /usr/bin/bash -e {0}
+2026-10-19T05:56:23.7506235Z env:
+2026-10-19T05:56:23.7506556Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-19T05:56:23.7507140Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-19T05:56:23.7507560Z   MAVEN_ARGS: -ntp
+2026-10-19T05:56:23.7507779Z ##[endgroup]
+2026-10-19T05:56:24.8024442Z Generating 2,048 bit RSA key pair and self-signed certificate (SHA256withRSA) with a validity of 10,000 days
+2026-10-19T05:56:24.8040870Z 	for: CN=RocAide, OU=Dev, O=RocAide, L=Jakarta, ST=ID, C=ID
+2026-10-19T05:56:25.0779922Z [Storing rocaide-release.keystore]
+2026-10-19T05:56:25.4108403Z ##[group]Run chmod +x utils/scripts/build.sh
+2026-10-19T05:56:25.4108789Z [36;1mchmod +x utils/scripts/build.sh[0m
+2026-10-19T05:56:25.4109112Z [36;1mnpm run build -- paid prod[0m
+2026-10-19T05:56:25.4173447Z shell: /usr/bin/bash -e {0}
+2026-10-19T05:56:25.4173707Z env:
+2026-10-19T05:56:25.4174033Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-19T05:56:25.4174550Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-19T05:56:25.4174949Z   MAVEN_ARGS: -ntp
+2026-10-19T05:56:25.4175160Z   TMPDIR: /tmp
+2026-10-19T05:56:25.4175750Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-10-19T05:56:25.4176040Z ##[endgroup]
+2026-10-19T05:56:25.5336186Z 
+2026-10-19T05:56:25.5336908Z > com.foxdebug.acode@1.12.3 build
+2026-10-19T05:56:25.5340339Z > sh utils/scripts/build.sh paid prod
+2026-10-19T05:56:25.5341195Z 
+2026-10-19T05:56:25.6482244Z Building APK file...
+2026-10-19T05:56:25.6483069Z type : apk
+2026-10-19T05:56:25.6484197Z node ./utils/config.js p paid
+2026-10-19T05:56:25.6726557Z rspack --mode production
+2026-10-19T05:56:38.0908175Z [1m[33mWARNING[39m[22m in [33m⚠[0m asset size limit: The following asset(s) exceed the recommended size limit (300.000 KiB). This can impact web performance.
+2026-10-19T05:56:38.0966156Z   │ Assets:
+2026-10-19T05:56:38.1006612Z   │   main.js (5.049 MiB)
+2026-10-19T05:56:38.1025811Z   │   6993.chunk.js (685.544 KiB)
+2026-10-19T05:56:38.1056187Z   │   1534.chunk.js (644.260 KiB)
+2026-10-19T05:56:38.1066018Z   │   console.js (360.314 KiB)
+2026-10-19T05:56:38.1076255Z   │   MesloLGSNFRegular.ttf (1.220 MiB)
+2026-10-19T05:56:38.1096081Z   │   7612.chunk.js (418.782 KiB)
+2026-10-19T05:56:38.1116150Z [0m
+2026-10-19T05:56:38.1125839Z 
+2026-10-19T05:56:38.1133641Z [1m[33mWARNING[39m[22m in [33m⚠[0m entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (500.000 KiB). This can impact web performance.
+2026-10-19T05:56:38.1135552Z   │ Entrypoints:
+2026-10-19T05:56:38.1136307Z   │   main (5.289 MiB)
+2026-10-19T05:56:38.1137059Z   │       main.js
+2026-10-19T05:56:38.1137680Z   │       main.css
+2026-10-19T05:56:38.1138264Z [0m
+2026-10-19T05:56:38.1138624Z 
+2026-10-19T05:56:38.1139351Z Rspack compiled with [1m[33m2 warnings[39m[22m in 12.31 s
+2026-10-19T05:56:38.1897636Z cordova build android --release -- --packageType=apk
+2026-10-19T05:56:38.7140916Z 
+2026-10-19T05:56:38.7145153Z ===================================================
+2026-10-19T05:56:38.7146713Z ==== Changed provider to com.foxdebug.provider ====
+2026-10-19T05:56:38.7147875Z ===================================================
+2026-10-19T05:56:38.7148532Z 
+2026-10-19T05:56:38.9100712Z [32mcopied: ic_launcher_background.xml[0m
+2026-10-19T05:56:38.9111290Z [32mcopied: ic_launcher_foreground.xml[0m
+2026-10-19T05:56:38.9112468Z [32mcopied: ic_launcher.xml[0m
+2026-10-19T05:56:38.9113508Z [32mcopied: ic_launcher_round.xml[0m
+2026-10-19T05:56:38.9119263Z [32mcopied: ic_launcher.webp[0m
+2026-10-19T05:56:38.9122510Z [32mcopied: ic_launcher_round.webp[0m
+2026-10-19T05:56:38.9127450Z [32mcopied: ic_launcher.webp[0m
+2026-10-19T05:56:38.9130777Z [32mcopied: ic_launcher_round.webp[0m
+2026-10-19T05:56:38.9136223Z [32mcopied: ic_launcher.webp[0m
+2026-10-19T05:56:38.9138663Z [32mcopied: ic_launcher_round.webp[0m
+2026-10-19T05:56:38.9142415Z [32mcopied: ic_launcher.webp[0m
+2026-10-19T05:56:38.9147835Z [32mcopied: ic_launcher_round.webp[0m
+2026-10-19T05:56:38.9153595Z [32mcopied: ic_launcher.webp[0m
+2026-10-19T05:56:38.9154751Z [32mcopied: ic_launcher_round.webp[0m
+2026-10-19T05:56:38.9156286Z [32mcopied: colors.xml[0m
+2026-10-19T05:56:38.9158692Z [32mcopied: ic_launcher_background.xml[0m
+2026-10-19T05:56:38.9162465Z [32mcopied: themes.xml[0m
+2026-10-19T05:56:38.9164137Z [32mcopied: network_security_config.xml[0m
+2026-10-19T05:56:39.0196552Z [Cordova Hook] ✅ Legacy JNI packaging already enabled, skipping
+2026-10-19T05:56:39.1243681Z [Cordova Hook] ✅ Static context already enabled, skipping
+2026-10-19T05:56:39.2285015Z [Cordova Hook] ✅ Patched targetSdkVersion to 36
+2026-10-19T05:56:39.3344462Z [Cordova Hook] ✅ Keyboard workaround already enabled, skipping
+2026-10-19T05:56:39.3356307Z 
+2026-10-19T05:56:39.3357309Z ===============================================
+2026-10-19T05:56:39.3358296Z ==== Changed package to com.foxdebug.acode ====
+2026-10-19T05:56:39.3359440Z ===============================================
+2026-10-19T05:56:39.3360158Z 
+2026-10-19T05:56:39.3363730Z 
+2026-10-19T05:56:39.3364339Z =========================================================
+2026-10-19T05:56:39.3365749Z ==== Changed provider to com.foxdebug.acode.provider ====
+2026-10-19T05:56:39.3366894Z =========================================================
+2026-10-19T05:56:39.3367506Z 
+2026-10-19T05:56:39.3471693Z Checking Java JDK and Android SDK versions
+2026-10-19T05:56:39.3474066Z ANDROID_HOME=/usr/local/lib/android/sdk (recommended setting)
+2026-10-19T05:56:39.3475157Z ANDROID_SDK_ROOT=/usr/local/lib/android/sdk (DEPRECATED)
+2026-10-19T05:56:39.7431990Z Using Android SDK: /usr/local/lib/android/sdk
+2026-10-19T05:56:39.7454924Z Reading build config file: /home/runner/work/rocaide/rocaide/build.json
+2026-10-19T05:56:39.7456871Z Reading the keystore from: /home/runner/work/rocaide/rocaide/rocaide-release.keystore
+2026-10-19T05:56:40.7986977Z Starting a Gradle Daemon (subsequent builds will be faster)
+2026-10-19T05:56:48.3971270Z > Task :wrapper
+2026-10-19T05:56:48.4005892Z 
+2026-10-19T05:56:48.4016193Z BUILD SUCCESSFUL in 8s
+2026-10-19T05:56:48.4026106Z 1 actionable task: 1 executed
+2026-10-19T05:56:48.7823057Z Subproject Path: CordovaLib
+2026-10-19T05:56:48.7824052Z Subproject Path: app
+2026-10-19T05:56:48.9201599Z Downloading https://services.gradle.org/distributions/gradle-8.14.2-bin.zip
+2026-10-19T05:56:50.9527361Z .............10%.............20%.............30%.............40%.............50%.............60%.............70%.............80%.............90%..............100%
+2026-10-19T05:56:52.2878930Z 
+2026-10-19T05:56:52.2904030Z Welcome to Gradle 8.14.2!
+2026-10-19T05:56:52.2925643Z 
+2026-10-19T05:56:52.2926065Z Here are the highlights of this release:
+2026-10-19T05:56:52.2926657Z  - Java 24 support
+2026-10-19T05:56:52.2927224Z  - GraalVM Native Image toolchain selection
+2026-10-19T05:56:52.2927829Z  - Enhancements to test reporting
+2026-10-19T05:56:52.2946050Z  - Build Authoring improvements
+2026-10-19T05:56:52.2965954Z 
+2026-10-19T05:56:52.2986460Z For more details see https://docs.gradle.org/8.14.2/release-notes.html
+2026-10-19T05:56:52.2991619Z 
+2026-10-19T05:56:52.3906933Z Starting a Gradle Daemon (subsequent builds will be faster)
+2026-10-19T05:57:55.2884487Z > Task :app:preBuild UP-TO-DATE
+2026-10-19T05:57:55.2926397Z > Task :app:preReleaseBuild UP-TO-DATE
+2026-10-19T05:57:55.5875674Z > Task :app:mergeReleaseJniLibFolders
+2026-10-19T05:57:55.5923466Z > Task :CordovaLib:preBuild UP-TO-DATE
+2026-10-19T05:57:55.5926593Z > Task :CordovaLib:preReleaseBuild UP-TO-DATE
+2026-10-19T05:57:55.5959289Z > Task :CordovaLib:mergeReleaseJniLibFolders
+2026-10-19T05:57:55.5960353Z > Task :CordovaLib:mergeReleaseNativeLibs NO-SOURCE
+2026-10-19T05:57:55.6863825Z > Task :CordovaLib:copyReleaseJniLibsProjectOnly
+2026-10-19T05:57:55.6886402Z > Task :CordovaLib:generateReleaseResValues
+2026-10-19T05:58:13.7862035Z > Task :CordovaLib:generateReleaseResources
+2026-10-19T05:58:13.8862292Z > Task :CordovaLib:packageReleaseResources
+2026-10-19T05:58:13.8867529Z > Task :app:mergeReleaseNativeLibs
+2026-10-19T05:58:15.0876791Z > Task :CordovaLib:parseReleaseLocalResources
+2026-10-19T05:58:15.0895714Z 
+2026-10-19T05:58:15.0916298Z > Task :app:stripReleaseDebugSymbols
+2026-10-19T05:58:15.0918420Z Unable to strip the following libraries, packaging them as they are: libaxs.so, libproot-xed.so, libproot.so, libproot32.so, libtalloc.so. Run with --info option to learn more.
+2026-10-19T05:58:15.1864198Z 
+2026-10-19T05:58:15.1888241Z > Task :app:extractReleaseNativeSymbolTables
+2026-10-19T05:58:15.1928525Z > Task :app:mergeReleaseNativeDebugMetadata NO-SOURCE
+2026-10-19T05:58:15.1956034Z > Task :CordovaLib:generateReleaseRFile
+2026-10-19T05:58:15.1963221Z > Task :CordovaLib:javaPreCompileRelease
+2026-10-19T05:58:15.9861702Z > Task :app:checkReleaseDuplicateClasses
+2026-10-19T05:58:24.2861940Z 
+2026-10-19T05:58:24.2879032Z Note: Some input files use or override a deprecated API.
+2026-10-19T05:58:24.2896017Z Note: Recompile with -Xlint:deprecation for details.
+2026-10-19T05:58:24.2896771Z > Task :CordovaLib:compileReleaseJavaWithJavac
+2026-10-19T05:58:27.8886083Z 
+2026-10-19T05:58:27.8916530Z > Task :app:buildKotlinToolingMetadata
+2026-10-19T05:58:27.8946487Z > Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+2026-10-19T05:58:27.8956162Z > Task :CordovaLib:bundleLibRuntimeToDirRelease
+2026-10-19T05:58:27.9026229Z > Task :app:generateReleaseBuildConfig
+2026-10-19T05:58:27.9046067Z > Task :CordovaLib:writeReleaseAarMetadata
+2026-10-19T05:58:28.1868056Z > Task :app:checkReleaseAarMetadata
+2026-10-19T05:58:28.1887412Z > Task :app:generateReleaseResValues
+2026-10-19T05:58:28.3884915Z > Task :app:mapReleaseSourceSetPaths
+2026-10-19T05:58:28.3906586Z > Task :app:generateReleaseResources
+2026-10-19T05:58:33.2900203Z > Task :app:mergeReleaseResources
+2026-10-19T05:58:33.4876519Z > Task :app:packageReleaseResources
+2026-10-19T05:58:33.4899148Z > Task :app:parseReleaseLocalResources
+2026-10-19T05:58:33.5886759Z > Task :app:createReleaseCompatibleScreenManifests
+2026-10-19T05:58:33.5916352Z > Task :app:extractDeepLinksRelease
+2026-10-19T05:58:33.5936394Z > Task :CordovaLib:extractDeepLinksRelease
+2026-10-19T05:58:33.6887040Z > Task :CordovaLib:processReleaseManifest
+2026-10-19T05:58:34.2876598Z > Task :app:processReleaseMainManifest
+2026-10-19T05:58:34.5862632Z > Task :app:processReleaseManifest
+2026-10-19T05:58:34.5879291Z > Task :app:processReleaseManifestForPackage
+2026-10-19T05:58:34.5929453Z > Task :CordovaLib:compileReleaseLibraryResources
+2026-10-19T05:58:35.5866130Z > Task :CordovaLib:bundleLibCompileToJarRelease
+2026-10-19T05:58:35.5926520Z > Task :app:javaPreCompileRelease
+2026-10-19T05:58:35.5930695Z > Task :app:desugarReleaseFileDependencies
+2026-10-19T05:58:35.6016283Z > Task :app:mergeReleaseStartupProfile
+2026-10-19T05:59:04.5862119Z > Task :app:processReleaseResources
+2026-10-19T05:59:05.5864719Z > Task :app:mergeExtDexRelease
+2026-10-19T05:59:48.4865805Z > Task :app:compileReleaseKotlin NO-SOURCE
+2026-10-19T05:59:54.8875742Z Note: Some input files use or override a deprecated API.
+2026-10-19T05:59:54.8876354Z 
+2026-10-19T05:59:54.8876912Z Note: Recompile with -Xlint:deprecation for details.
+2026-10-19T05:59:54.8877674Z > Task :app:compileReleaseJavaWithJavac
+2026-10-19T05:59:54.8896193Z Note: Some input files use unchecked or unsafe operations.
+2026-10-19T05:59:54.8914556Z Note: Recompile with -Xlint:unchecked for details.
+2026-10-19T06:00:03.5879590Z 
+2026-10-19T06:00:03.5956382Z > Task :app:dexBuilderRelease
+2026-10-19T06:00:03.5957201Z > Task :CordovaLib:prepareReleaseArtProfile
+2026-10-19T06:00:08.7861468Z > Task :app:mergeReleaseArtProfile
+2026-10-19T06:00:08.8901594Z > Task :CordovaLib:bundleLibRuntimeToJarRelease
+2026-10-19T06:00:08.8917672Z > Task :app:mergeDexRelease
+2026-10-19T06:00:08.8959686Z > Task :app:mergeReleaseShaders
+2026-10-19T06:00:08.8987084Z > Task :app:compileReleaseShaders NO-SOURCE
+2026-10-19T06:00:08.9016286Z > Task :app:generateReleaseAssets UP-TO-DATE
+2026-10-19T06:00:08.9046074Z > Task :CordovaLib:mergeReleaseShaders
+2026-10-19T06:00:08.9867163Z > Task :CordovaLib:compileReleaseShaders NO-SOURCE
+2026-10-19T06:00:08.9896416Z > Task :CordovaLib:generateReleaseAssets UP-TO-DATE
+2026-10-19T06:00:08.9897437Z > Task :CordovaLib:mergeReleaseAssets
+2026-10-19T06:00:09.6864154Z > Task :app:mergeReleaseAssets
+2026-10-19T06:00:10.8866769Z > Task :app:mergeReleaseGlobalSynthetics
+2026-10-19T06:00:11.1861552Z > Task :app:compressReleaseAssets
+2026-10-19T06:00:11.3887132Z > Task :app:extractReleaseVersionControlInfo
+2026-10-19T06:00:11.3947416Z > Task :app:extractProguardFiles
+2026-10-19T06:00:11.4887478Z > Task :CordovaLib:processReleaseJavaRes
+2026-10-19T06:00:11.4896163Z > Task :CordovaLib:createFullJarRelease
+2026-10-19T06:00:11.4926027Z > Task :CordovaLib:extractProguardFiles
+2026-10-19T06:00:11.7861292Z > Task :app:compileReleaseArtProfile
+2026-10-19T06:00:12.6861370Z > Task :CordovaLib:generateReleaseLintModel
+2026-10-19T06:00:12.6886324Z > Task :CordovaLib:prepareLintJarForPublish
+2026-10-19T06:00:12.6899893Z > Task :CordovaLib:stripReleaseDebugSymbols NO-SOURCE
+2026-10-19T06:00:13.5875618Z > Task :app:generateReleaseLintVitalReportModel
+2026-10-19T06:00:13.5877026Z > Task :CordovaLib:copyReleaseJniLibsProjectAndLocalJars
+2026-10-19T06:00:13.5878141Z > Task :CordovaLib:extractDeepLinksForAarRelease
+2026-10-19T06:00:20.3876723Z > Task :CordovaLib:extractReleaseAnnotations
+2026-10-19T06:00:20.3956449Z > Task :CordovaLib:mergeReleaseGeneratedProguardFiles
+2026-10-19T06:00:20.3996357Z > Task :CordovaLib:mergeReleaseConsumerProguardFiles
+2026-10-19T06:00:20.4862108Z > Task :CordovaLib:mergeReleaseJavaResource
+2026-10-19T06:00:20.5870240Z > Task :CordovaLib:syncReleaseLibJars
+2026-10-19T06:00:20.5921603Z > Task :CordovaLib:bundleReleaseLocalLintAar
+2026-10-19T06:00:20.6876606Z > Task :CordovaLib:writeReleaseLintModelMetadata
+2026-10-19T06:00:20.6877950Z > Task :CordovaLib:generateReleaseLintVitalModel
+2026-10-19T06:00:20.6897868Z > Task :app:processReleaseJavaRes
+2026-10-19T06:00:21.9876661Z > Task :app:mergeReleaseJavaResource
+2026-10-19T06:00:22.2871099Z > Task :app:optimizeReleaseResources
+2026-10-19T06:00:22.3906674Z > Task :app:collectReleaseDependencies
+2026-10-19T06:00:22.4862122Z > Task :app:sdkReleaseDependencyData
+2026-10-19T06:00:22.4865710Z > Task :app:validateSigningRelease
+2026-10-19T06:00:22.4887746Z > Task :app:writeReleaseAppMetadata
+2026-10-19T06:00:22.4896051Z > Task :app:writeReleaseSigningConfigVersions
+2026-10-19T06:00:29.5861948Z > Task :CordovaLib:lintVitalAnalyzeRelease
+2026-10-19T06:00:42.2876531Z > Task :app:lintVitalAnalyzeRelease
+2026-10-19T06:00:42.3876914Z > Task :app:lintVitalReportRelease
+2026-10-19T06:00:42.3916210Z > Task :app:lintVitalRelease
+2026-10-19T06:00:44.5862050Z > Task :app:packageRelease
+2026-10-19T06:00:44.5880050Z > Task :app:createReleaseApkListingFileRedirect
+2026-10-19T06:00:44.5896073Z > Task :app:assembleRelease
+2026-10-19T06:00:44.5927704Z > Task :app:cdvBuildRelease
+2026-10-19T06:00:44.6897451Z 
+2026-10-19T06:00:44.6928834Z [Incubating] Problems report is available at: file:///home/runner/work/rocaide/rocaide/platforms/android/build/reports/problems/problems-report.html
+2026-10-19T06:00:44.6966364Z 
+2026-10-19T06:00:44.7006620Z Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+2026-10-19T06:00:44.7035859Z 
+2026-10-19T06:00:44.7066729Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+2026-10-19T06:00:44.7095642Z 
+2026-10-19T06:00:44.7142722Z For more on this, please refer to https://docs.gradle.org/8.14.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+2026-10-19T06:00:44.7165544Z 
+2026-10-19T06:00:44.7175884Z BUILD SUCCESSFUL in 3m 55s
+2026-10-19T06:00:44.7215923Z 84 actionable tasks: 84 executed
+2026-10-19T06:00:45.0752185Z Built the following apk(s): 
+2026-10-19T06:00:45.0753625Z 	/home/runner/work/rocaide/rocaide/platforms/android/app/build/outputs/apk/release/app-release.apk
+2026-10-19T06:00:45.2019213Z ##[group]Run VERSION=$(grep -oP 'version="\K[0-9.]+' config.xml || sed -n 's/.*version="\([0-9.]*\)".*/\1/p' config.xml | head -1)
+2026-10-19T06:00:45.2020086Z [36;1mVERSION=$(grep -oP 'version="\K[0-9.]+' config.xml || sed -n 's/.*version="\([0-9.]*\)".*/\1/p' config.xml | head -1)[0m
+2026-10-19T06:00:45.2020612Z [36;1mecho "Detected version: $VERSION"[0m
+2026-10-19T06:00:45.2021067Z [36;1mfind platforms/android/app/build/outputs/apk -name '*.apk' | while read apk; do[0m
+2026-10-19T06:00:45.2021744Z [36;1m  dir=$(dirname "$apk")[0m
+2026-10-19T06:00:45.2022041Z [36;1m  base=$(basename "$apk" .apk)[0m
+2026-10-19T06:00:45.2022378Z [36;1m  mv "$apk" "$dir/acode-rocaide-v${VERSION}-${base}.apk"[0m
+2026-10-19T06:00:45.2022697Z [36;1mdone[0m
+2026-10-19T06:00:45.2022908Z [36;1mecho "Final APK files:"[0m
+2026-10-19T06:00:45.2023314Z [36;1mfind platforms/android/app/build/outputs/apk -name '*.apk' -exec ls -lh {} \;[0m
+2026-10-19T06:00:45.2099064Z shell: /usr/bin/bash -e {0}
+2026-10-19T06:00:45.2099318Z env:
+2026-10-19T06:00:45.2099629Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-19T06:00:45.2100141Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-19T06:00:45.2100520Z   MAVEN_ARGS: -ntp
+2026-10-19T06:00:45.2100727Z ##[endgroup]
+2026-10-19T06:00:45.2268902Z Detected version: 1.12.8
+2026-10-19T06:00:45.2336737Z Final APK files:
+2026-10-19T06:00:45.2365726Z -rw-r--r-- 1 runner runner 30M Oct 19 06:00 platforms/android/app/build/outputs/apk/release/acode-rocaide-v1.12.8-app-release.apk
+2026-10-19T06:00:45.2455934Z ##[group]Run actions/upload-artifact@v7
+2026-10-19T06:00:45.2456269Z with:
+2026-10-19T06:00:45.2456480Z   name: acode-rocaide-vprod-8
+2026-10-19T06:00:45.2456810Z   path: platforms/android/app/build/outputs/apk/**/*.apk
+2026-10-19T06:00:45.2457145Z   if-no-files-found: warn
+2026-10-19T06:00:45.2457380Z   retention-days: 7
+2026-10-19T06:00:45.2457598Z   compression-level: 6
+2026-10-19T06:00:45.2457819Z   overwrite: false
+2026-10-19T06:00:45.2458035Z   include-hidden-files: false
+2026-10-19T06:00:45.2458291Z   archive: true
+2026-10-19T06:00:45.2458483Z env:
+2026-10-19T06:00:45.2458783Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-19T06:00:45.2459278Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-19T06:00:45.2459664Z   MAVEN_ARGS: -ntp
+2026-10-19T06:00:45.2459868Z ##[endgroup]
+2026-10-19T06:00:45.4056638Z With the provided path, there will be 1 file uploaded
+2026-10-19T06:00:45.4082666Z Artifact name is valid!
+2026-10-19T06:00:45.4096089Z Root directory input is valid!
+2026-10-19T06:00:45.5577259Z ##[error]Failed to CreateArtifact: Artifact storage quota has been hit. Unable to upload any new artifacts.
+More info on storage limits: https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions#calculating-minute-and-storage-spending
+2026-10-19T06:00:45.6142654Z ##[group]Run softprops/action-gh-release@v3
+2026-10-19T06:00:45.6143216Z with:
+2026-10-19T06:00:45.6143547Z   tag_name: rocaide-v8
+2026-10-19T06:00:45.6143924Z   name: RocAide v8
+2026-10-19T06:00:45.6144394Z   files: platforms/android/app/build/outputs/apk/**/*.apk
+2026-10-19T06:00:45.6144975Z   prerelease: true
+2026-10-19T06:00:45.6145623Z   generate_release_notes: true
+2026-10-19T06:00:45.6146071Z   overwrite_files: true
+2026-10-19T06:00:45.6150860Z   token: ***
+2026-10-19T06:00:45.6151207Z env:
+2026-10-19T06:00:45.6151719Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-19T06:00:45.6152612Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-19T06:00:45.6153331Z   MAVEN_ARGS: -ntp
+2026-10-19T06:00:45.6184439Z   GITHUB_TOKEN: ***
+2026-10-19T06:00:45.6184850Z ##[endgroup]
+2026-10-19T06:00:49.1083783Z 👩‍🏭 Creating new GitHub release for tag rocaide-v8...
+2026-10-19T06:00:50.8774971Z ⬆️ Uploading acode-rocaide-v1.12.8-app-release.apk...
+2026-10-19T06:00:53.0007534Z ✅ Uploaded acode-rocaide-v1.12.8-app-release.apk
+2026-10-19T06:00:53.0008709Z Finalizing release...
+2026-10-19T06:00:53.0009505Z Getting assets list...
+2026-10-19T06:00:53.1627419Z 🎉 Release ready at https://github.com/ownerroc/rocaide/releases/tag/rocaide-v8
+2026-10-19T06:00:53.1822364Z Post job cleanup.
+2026-10-19T06:00:53.3106701Z Cache hit occurred on the primary key node-cache-Linux-x64-npm-5cdcc943edc6a4cb8996189b744afb747159ab2c2ffc06f9d2509f415b4a5862, not saving cache.
+2026-10-19T06:00:53.3247935Z Post job cleanup.
+2026-10-19T06:00:53.5074995Z Post job cleanup.
+2026-10-19T06:00:53.6239751Z [command]/usr/bin/git version
+2026-10-19T06:00:53.6337883Z git version 2.55.0
+2026-10-19T06:00:53.6402466Z Temporarily overriding HOME='/home/runner/work/_temp/2a1dd9d5-5d73-4f77-82eb-f7d1d674bafb' before making global git config changes
+2026-10-19T06:00:53.6411015Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-19T06:00:53.6412542Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rocaide/rocaide
+2026-10-19T06:00:53.6494263Z Removing SSH command configuration
+2026-10-19T06:00:53.6495662Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T06:00:53.6569131Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-19T06:00:53.6963118Z Removing HTTP extra header
+2026-10-19T06:00:53.6964422Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T06:00:53.7060613Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-19T06:00:53.7412497Z Removing includeIf entries pointing to credentials config files
+2026-10-19T06:00:53.7426601Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-19T06:00:53.7470602Z includeif.gitdir:/home/runner/work/rocaide/rocaide/.git.path
+2026-10-19T06:00:53.7476232Z includeif.gitdir:/home/runner/work/rocaide/rocaide/.git/worktrees/*.path
+2026-10-19T06:00:53.7488291Z includeif.gitdir:/github/workspace/.git.path
+2026-10-19T06:00:53.7489512Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-19T06:00:53.7492176Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/rocaide/rocaide/.git.path
+2026-10-19T06:00:53.7527082Z /home/runner/work/_temp/git-credentials-29b89cb3-8195-4eb4-b2a2-f834e70cb535.config
+2026-10-19T06:00:53.7561036Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/rocaide/rocaide/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-29b89cb3\-8195\-4eb4\-b2a2\-f834e70cb535\.config
+2026-10-19T06:00:53.7614149Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/rocaide/rocaide/.git/worktrees/*.path
+2026-10-19T06:00:53.7676210Z /home/runner/work/_temp/git-credentials-29b89cb3-8195-4eb4-b2a2-f834e70cb535.config
+2026-10-19T06:00:53.7727651Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/rocaide/rocaide/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-29b89cb3\-8195\-4eb4\-b2a2\-f834e70cb535\.config
+2026-10-19T06:00:53.7810627Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-19T06:00:53.7822639Z /github/runner_temp/git-credentials-29b89cb3-8195-4eb4-b2a2-f834e70cb535.config
+2026-10-19T06:00:53.7831032Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-29b89cb3\-8195\-4eb4\-b2a2\-f834e70cb535\.config
+2026-10-19T06:00:53.7896972Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-19T06:00:53.7917404Z /github/runner_temp/git-credentials-29b89cb3-8195-4eb4-b2a2-f834e70cb535.config
+2026-10-19T06:00:53.7930826Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-29b89cb3\-8195\-4eb4\-b2a2\-f834e70cb535\.config
+2026-10-19T06:00:53.7975849Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-19T06:00:53.8224076Z Removing credentials config '/home/runner/work/_temp/git-credentials-29b89cb3-8195-4eb4-b2a2-f834e70cb535.config'
+2026-10-19T06:00:53.8397465Z Cleaning up orphan processes
+2026-10-19T06:00:53.8794934Z Terminate orphan process: pid (3153) (java)
+2026-10-19T06:00:53.8837975Z Terminate orphan process: pid (3252) (java)
